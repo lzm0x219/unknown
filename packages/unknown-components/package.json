@@ -1,0 +1,12 @@
+{
+  "name": "@unknown/components",
+  "version": "0.0.0-development",
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "author": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
