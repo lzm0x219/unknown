@@ -7,4 +7,7 @@ export default defineConfig({
     historyApiFallback: true,
   },
   plugins: [pluginReact()],
+  html: {
+    title: "unknown",
+  },
 });
