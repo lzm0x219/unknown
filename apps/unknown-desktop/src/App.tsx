@@ -1,12 +1,10 @@
-import './App.css';
+import { createNatal } from "@unknown/core";
 
-const App = () => {
-  return (
-    <div className="content">
-      <h1>Rsbuild with React</h1>
-      <p>Start building amazing things with Rsbuild.</p>
-    </div>
-  );
-};
-
-export default App;
+export default function App() {
+  createNatal({
+    birthday: "",
+    birthdayType: 1,
+    gender: "男",
+  });
+  return <div>123</div>;
+}

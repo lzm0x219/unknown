@@ -2,11 +2,55 @@
   "name": "@unknown/hooks",
   "version": "0.0.0-development",
   "description": "",
-  "keywords": [],
-  "license": "ISC",
-  "author": "",
-  "main": "index.js",
+  "keywords": [
+    "react",
+    "hooks"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "lzm0x219",
+    "email": "lzm0x219@gmail.com"
+  },
+  "exports": {
+    "require": {
+      "types": "./dist/index.d.cts",
+      "default": "./dist/index.cjs"
+    },
+    "import": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pkgroll",
+    "dev": "pkgroll --watch"
+  },
+  "dependencies": {
+    "@types/react": "18.2.73",
+    "@types/react-dom": "18.2.23",
+    "@unknown/core": "workspace:0.0.0-development",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "pkgroll": "2.0.2"
+  },
+  "peerDependencies": {
+    "@types/react": ">=18.2.73",
+    "@types/react-dom": ">=18.2.23",
+    "@unknown/core": "*",
+    "react": ">=18.2.0",
+    "react-dom": ">=18.2.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/react": {
+      "optional": true
+    },
+    "@types/react-dom": {
+      "optional": true
+    }
   }
 }
