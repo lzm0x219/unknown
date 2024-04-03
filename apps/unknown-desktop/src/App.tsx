@@ -1,10 +1,15 @@
-import { createNatal } from "@unknown/core";
+import { Natal } from "@unknown/components";
 
 export default function App() {
-  createNatal({
-    birthday: "",
-    birthdayType: 1,
-    gender: "男",
-  });
-  return <div>123</div>;
+  return (
+    <div className="mt-[300px] flex justify-center">
+      <Natal
+        width={600}
+        height={600}
+        birthday="1998-12-18"
+        birthdayType={2}
+        gender="男"
+      />
+    </div>
+  );
 }

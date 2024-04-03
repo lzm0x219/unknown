@@ -1,3 +1,3 @@
-export function useNatal() {
-  console.log("useNatal");
-}
+export { useNatal } from "./useNatal";
+export { useUpdateEffect } from "./useUpdateEffect";
+export { usePalace } from "./usePalace";

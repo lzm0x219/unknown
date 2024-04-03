@@ -9,6 +9,8 @@ import {
   UrsaMajor,
   SouthMajor,
   Stems,
+  ShortPalaces,
+  Energy,
 } from "./constants";
 import { fixIndex, selectElements } from "./shared";
 
@@ -20,9 +22,35 @@ export interface NatalCreateOptions {
 }
 
 export interface Natal {
-  profile: {
-    name: string;
-  };
+  // 个人信息
+  profile: NatalProfile;
+  // 生年四化
+  selfTransform: string[];
+  palaces: NatalPalace[];
+}
+
+export interface NatalProfile {
+  name: string;
+  gender: string;
+  fiveElementName: string;
+}
+
+export interface NatalPalaceStar {
+  star: string;
+  selfTransform: string;
+}
+
+export interface NatalPalace {
+  name: string;
+  nameLabel: string;
+  branch: string;
+  stem: string;
+  stemBranchLabel: string;
+  isOriginPalace: boolean;
+  stars: NatalPalaceStar[];
+  selfTransform: string[];
+  ten: string;
+  tenName: string;
 }
 
 export function createNatal({
@@ -30,10 +58,13 @@ export function createNatal({
   birthday,
   birthdayType,
   gender,
-}: NatalCreateOptions) {
+}: NatalCreateOptions): Natal {
   const [year, month, day, time] = [1998, 12, 18, 6];
   // 天干的数
   const stemIndex = year % 10 === 0 ? 10 : year % 10;
+
+  // 生年四化
+  const selfTransform = HeavenlyStemsMap[stemIndex].stars;
 
   const yinYangGender = getYinYangGender(stemIndex, gender);
 
@@ -50,15 +81,19 @@ export function createNatal({
   const palaces = EarthlyBranches.map((branch, index) => {
     const currentStem =
       HeavenlyStems[fixIndex(tigerHeavenlyStemIndex + index, 10)];
+    const name = Palaces[fixIndex(lifePalaceIndex - index)];
 
     return {
-      name: Palaces[fixIndex(lifePalaceIndex - index)],
+      name,
+      nameLabel: name.split("").join("\n"),
       branch,
       stem: currentStem,
+      stemBranchLabel: `${currentStem}\n${branch}`,
       isOriginPalace: stem === currentStem,
-      stars: [] as string[],
+      stars: [] as NatalPalaceStar[],
       selfTransform: HeavenlyStemsMap[Stems[currentStem]].stars,
       ten: "",
+      tenName: "",
     };
   });
 
@@ -75,8 +110,6 @@ export function createNatal({
     item.includes(natalPalace.branch),
   );
 
-  console.log(FiveElements, fiveElements, natalPalaceStemIndex);
-
   const { name: fiveElementName, number: fiveElementNumber } =
     fiveElements[natalPalaceBranchIndex];
 
@@ -88,13 +121,19 @@ export function createNatal({
   // 安紫微星系
   UrsaMajor.forEach((star, i) => {
     if (star) {
-      palaces[fixIndex(zwIndex - i)].stars.push(star);
+      palaces[fixIndex(zwIndex - i)].stars.push({
+        star,
+        selfTransform: Energy[selfTransform.indexOf(star)],
+      });
     }
   });
   // 安天府星系
   SouthMajor.forEach((star, i) => {
     if (star) {
-      palaces[fixIndex(tfIndex + i)].stars.push(star);
+      palaces[fixIndex(tfIndex + i)].stars.push({
+        star,
+        selfTransform: Energy[selfTransform.indexOf(star)],
+      });
     }
   });
 
@@ -103,39 +142,44 @@ export function createNatal({
     EarthlyBranches.indexOf("辰"),
     EarthlyBranches.indexOf("戌"),
   ];
-  palaces[fixIndex(chenIndex + (month - 1))].stars.push("左辅");
-  palaces[fixIndex(wuIndex - (month - 1))].stars.push("右弼");
+  palaces[fixIndex(chenIndex + (month - 1))].stars.push({
+    star: "左辅",
+    selfTransform: Energy[selfTransform.indexOf("左辅")],
+  });
+  palaces[fixIndex(wuIndex - (month - 1))].stars.push({
+    star: "右弼",
+    selfTransform: Energy[selfTransform.indexOf("右弼")],
+  });
 
   // 安文昌文曲
-  palaces[fixIndex(chenIndex + (time - 1))].stars.push("文曲");
-  palaces[fixIndex(wuIndex - (time - 1))].stars.push("文昌");
+  palaces[fixIndex(chenIndex + (time - 1))].stars.push({
+    star: "文曲",
+    selfTransform: Energy[selfTransform.indexOf("文曲")],
+  });
+  palaces[fixIndex(wuIndex - (time - 1))].stars.push({
+    star: "文昌",
+    selfTransform: Energy[selfTransform.indexOf("文昌")],
+  });
 
   // 安大限
   palaces.forEach((_, index) => {
-    palaces[
-      fixIndex(
-        isClockwise(stemIndex, gender)
-          ? lifePalaceIndex + index
-          : lifePalaceIndex - index,
-      )
-    ].ten =
+    const tenIndex = fixIndex(
+      isClockwise(stemIndex, gender)
+        ? lifePalaceIndex + index
+        : lifePalaceIndex - index,
+    );
+    palaces[tenIndex].ten =
       `${index * 10 + fiveElementNumber}~${(index + 1) * 10 + fiveElementNumber - 1}`;
+    palaces[tenIndex].tenName = `大${ShortPalaces[index]}`;
   });
-
-  console.log(
-    yinYangGender,
-    HeavenlyStemsMap[stemIndex].stars,
-    fiveElementName,
-    palaces,
-  );
 
   return {
     profile: {
       name,
-      yinYangGender,
+      gender: yinYangGender,
       fiveElementName,
     },
-    selfTransform: HeavenlyStemsMap[stemIndex].stars,
+    selfTransform,
     palaces,
   };
 }

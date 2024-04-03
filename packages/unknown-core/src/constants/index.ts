@@ -55,6 +55,21 @@ export const Palaces = [
   "父母",
 ];
 
+export const ShortPalaces = [
+  "命",
+  "兄",
+  "夫",
+  "子",
+  "财",
+  "疾",
+  "迁",
+  "友",
+  "官",
+  "田",
+  "福",
+  "父",
+];
+
 type HeavenlyStemsRecord = {
   // 天干
   stem: string;
@@ -187,3 +202,5 @@ export const SouthMajor = [
   "",
   "破军",
 ];
+
+export const Energy = ["A", "B", "C", "D"];
