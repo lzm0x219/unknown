@@ -6,9 +6,9 @@ export default function App() {
       <Natal
         width={600}
         height={600}
-        birthday="1998-12-18"
+        birthday="1998-1-23"
         birthdayType={2}
-        gender="女"
+        gender="男"
       />
     </div>
   );

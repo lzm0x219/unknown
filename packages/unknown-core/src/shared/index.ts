@@ -1,4 +1,5 @@
 export function fixIndex(index: number, total: number = 12) {
+  index = index % total;
   if (index < 0) {
     return index + total;
   }

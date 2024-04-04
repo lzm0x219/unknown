@@ -29,7 +29,7 @@ export function NatalPalaceOrigin({
       <Text
         text={"来\n因"}
         x={x + width / 2 - fontSize / 2}
-        y={y + height / 2 - fontSize}
+        y={y + height / 2 - fontSize + 1}
         fill="red"
         fontSize={fontSize}
       />

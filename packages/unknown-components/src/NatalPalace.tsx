@@ -12,6 +12,9 @@ export interface NatalPalaceProps {
   y: number;
   palace: INatalPalace;
   isNatalTen: boolean;
+  isSelected?: boolean;
+  selectedSelfTransform: string[];
+  onClick?: () => void;
 }
 
 export function NatalPalace({
@@ -21,6 +24,9 @@ export function NatalPalace({
   y,
   palace,
   isNatalTen,
+  selectedSelfTransform = [],
+  isSelected = false,
+  onClick,
 }: NatalPalaceProps) {
   // 竖
   const [verticalWidth, verticalHeight] = [width / 5, height / 3];
@@ -31,7 +37,7 @@ export function NatalPalace({
   ];
 
   return (
-    <Group>
+    <Group onClick={onClick}>
       {/* 宫位轮廓 */}
       <Rect
         width={width}
@@ -40,6 +46,7 @@ export function NatalPalace({
         y={y}
         stroke="black"
         strokeWidth={2}
+        fill={isSelected ? "rgba(0,0,0,0.1)" : "white"}
       />
       {palace.isOriginPalace && (
         <NatalPalaceOrigin
@@ -83,7 +90,13 @@ export function NatalPalace({
         y={y + verticalHeight * 2 + horizontalHeight}
         color={isNatalTen ? "red" : "black"}
       />
-      <NatalPalaceStars x={x} y={y} stars={palace.stars} />
+      <NatalPalaceStars
+        x={x}
+        y={y}
+        stars={palace.stars}
+        index={palace.index}
+        selfTransform={selectedSelfTransform}
+      />
     </Group>
   );
 }

@@ -204,3 +204,5 @@ export const SouthMajor = [
 ];
 
 export const Energy = ["A", "B", "C", "D"];
+
+export const EnergyColors = ["green", "purple", "blue", "red"];

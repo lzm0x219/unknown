@@ -49,9 +49,11 @@ export interface NatalProfile {
 export interface NatalPalaceStar {
   star: string;
   selfTransform: string;
+  centrifugeSelfTransform: string;
 }
 
 export interface NatalPalace {
+  index: number;
   name: string;
   nameLabel: string;
   branch: string;
@@ -70,7 +72,7 @@ export function createNatal({
   birthdayType,
   gender,
 }: NatalCreateOptions): Natal {
-  const [year, month, day, time] = [1998, 12, 18, 6];
+  const [year, month, day, time] = [1998, 1, 23, 2];
 
   const tenRecord = {
     currentTenIndex: 0,
@@ -101,6 +103,7 @@ export function createNatal({
     const name = Palaces[fixIndex(lifePalaceIndex - index)];
 
     return {
+      index,
       name,
       nameLabel: name.split("").join("\n"),
       branch,
@@ -141,6 +144,7 @@ export function createNatal({
       palaces[fixIndex(zwIndex - i)].stars.push({
         star,
         selfTransform: Energy[selfTransform.indexOf(star)],
+        centrifugeSelfTransform: "",
       });
     }
   });
@@ -150,6 +154,7 @@ export function createNatal({
       palaces[fixIndex(tfIndex + i)].stars.push({
         star,
         selfTransform: Energy[selfTransform.indexOf(star)],
+        centrifugeSelfTransform: "",
       });
     }
   });
@@ -162,24 +167,28 @@ export function createNatal({
   palaces[fixIndex(chenIndex + (month - 1))].stars.push({
     star: "左辅",
     selfTransform: Energy[selfTransform.indexOf("左辅")],
+    centrifugeSelfTransform: "",
   });
   palaces[fixIndex(wuIndex - (month - 1))].stars.push({
     star: "右弼",
     selfTransform: Energy[selfTransform.indexOf("右弼")],
+    centrifugeSelfTransform: "",
   });
 
   // 安文昌文曲
   palaces[fixIndex(chenIndex + (time - 1))].stars.push({
     star: "文曲",
     selfTransform: Energy[selfTransform.indexOf("文曲")],
+    centrifugeSelfTransform: "",
   });
   palaces[fixIndex(wuIndex - (time - 1))].stars.push({
     star: "文昌",
     selfTransform: Energy[selfTransform.indexOf("文昌")],
+    centrifugeSelfTransform: "",
   });
 
-  // 安大限
-  palaces.forEach((_, index) => {
+  // 安大限以及离心自化
+  palaces.forEach((palace, index) => {
     const tenIndex = fixIndex(
       isClockwise(stemIndex, gender)
         ? lifePalaceIndex + index
@@ -194,6 +203,12 @@ export function createNatal({
         : lifePalaceIndex - index - tenRecord.currentTenIndex,
     );
     palaces[tenPositionNameIndex].tenPositionName = `大${ShortPalaces[index]}`;
+
+    // 离心自化
+    palace.stars.forEach((star) => {
+      star.centrifugeSelfTransform =
+        Energy[palace.selfTransform.indexOf(star.star)];
+    });
   });
 
   const tens: NatalTen[] = [];
