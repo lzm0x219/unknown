@@ -27,6 +27,17 @@ export interface Natal {
   // 生年四化
   selfTransform: string[];
   palaces: NatalPalace[];
+  tens: NatalTen[];
+  lifePalaceIndex: number;
+  getTenPositionNameIndex(n: number): number;
+  setCurrentTenIndex(n: number): void;
+}
+
+export interface NatalTen {
+  // 大限年限区间
+  ten: string;
+  // 大限名称
+  tenName: string;
 }
 
 export interface NatalProfile {
@@ -50,7 +61,7 @@ export interface NatalPalace {
   stars: NatalPalaceStar[];
   selfTransform: string[];
   ten: string;
-  tenName: string;
+  tenPositionName: string;
 }
 
 export function createNatal({
@@ -60,12 +71,18 @@ export function createNatal({
   gender,
 }: NatalCreateOptions): Natal {
   const [year, month, day, time] = [1998, 12, 18, 6];
+
+  const tenRecord = {
+    currentTenIndex: 0,
+  };
+
   // 天干的数
   const stemIndex = year % 10 === 0 ? 10 : year % 10;
 
   // 生年四化
   const selfTransform = HeavenlyStemsMap[stemIndex].stars;
 
+  // 性别
   const yinYangGender = getYinYangGender(stemIndex, gender);
 
   // 生年天干和寅宫天干
@@ -93,7 +110,7 @@ export function createNatal({
       stars: [] as NatalPalaceStar[],
       selfTransform: HeavenlyStemsMap[Stems[currentStem]].stars,
       ten: "",
-      tenName: "",
+      tenPositionName: "",
     };
   });
 
@@ -170,8 +187,16 @@ export function createNatal({
     );
     palaces[tenIndex].ten =
       `${index * 10 + fiveElementNumber}~${(index + 1) * 10 + fiveElementNumber - 1}`;
-    palaces[tenIndex].tenName = `大${ShortPalaces[index]}`;
+
+    const tenPositionNameIndex = fixIndex(
+      isClockwise(stemIndex, gender)
+        ? lifePalaceIndex + index + tenRecord.currentTenIndex
+        : lifePalaceIndex - index - tenRecord.currentTenIndex,
+    );
+    palaces[tenPositionNameIndex].tenPositionName = `大${ShortPalaces[index]}`;
   });
+
+  const tens: NatalTen[] = [];
 
   return {
     profile: {
@@ -181,6 +206,27 @@ export function createNatal({
     },
     selfTransform,
     palaces,
+    tens,
+    lifePalaceIndex,
+    getTenPositionNameIndex(index: number) {
+      return fixIndex(
+        isClockwise(stemIndex, gender)
+          ? lifePalaceIndex + index + tenRecord.currentTenIndex
+          : lifePalaceIndex - index - tenRecord.currentTenIndex,
+      );
+    },
+    setCurrentTenIndex(n) {
+      tenRecord.currentTenIndex = n;
+      palaces.forEach((_, index) => {
+        const tenPositionNameIndex = fixIndex(
+          isClockwise(stemIndex, gender)
+            ? lifePalaceIndex + index + tenRecord.currentTenIndex
+            : lifePalaceIndex - index - tenRecord.currentTenIndex,
+        );
+        palaces[tenPositionNameIndex].tenPositionName =
+          `大${ShortPalaces[index]}`;
+      });
+    },
   };
 }
 

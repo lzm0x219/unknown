@@ -2,6 +2,7 @@ import { useNatal, usePalace } from "@unknown/hooks";
 import type { NatalCreateOptions } from "@unknown/core";
 import { Stage, Layer } from "react-konva";
 import { NatalPalace } from "./NatalPalace";
+import { useEffect } from "react";
 
 export interface NatalProps extends NatalCreateOptions {
   className?: string;
@@ -24,7 +25,13 @@ export function Natal({
     containerPadding: padding,
   });
 
+  const currentTenIndex = 2;
+
   console.log(natal);
+
+  useEffect(() => {
+    natal.setCurrentTenIndex(currentTenIndex);
+  }, []);
 
   return (
     <Stage className={className} width={width} height={height}>
@@ -37,6 +44,9 @@ export function Natal({
             x={palacePositions[index].x}
             y={palacePositions[index].y}
             palace={palace}
+            isNatalTen={
+              currentTenIndex === natal.getTenPositionNameIndex(index)
+            }
           />
         ))}
       </Layer>

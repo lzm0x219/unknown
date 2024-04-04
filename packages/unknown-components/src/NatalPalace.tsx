@@ -11,9 +11,17 @@ export interface NatalPalaceProps {
   x: number;
   y: number;
   palace: INatalPalace;
+  isNatalTen: boolean;
 }
 
-export function NatalPalace({ width, height, x, y, palace }: NatalPalaceProps) {
+export function NatalPalace({
+  width,
+  height,
+  x,
+  y,
+  palace,
+  isNatalTen,
+}: NatalPalaceProps) {
   // 竖
   const [verticalWidth, verticalHeight] = [width / 5, height / 3];
   // 横
@@ -59,11 +67,12 @@ export function NatalPalace({ width, height, x, y, palace }: NatalPalaceProps) {
       />
       {/* 地盘宫职 */}
       <NatalPalaceHorizontalBox
-        name={palace.tenName}
+        name={palace.tenPositionName}
         width={horizontalWidth}
         height={horizontalHeight}
         x={x + verticalWidth}
         y={y + verticalHeight * 2}
+        color={isNatalTen ? "red" : "black"}
       />
       {/* 大命年龄区间 */}
       <NatalPalaceHorizontalBox
@@ -72,6 +81,7 @@ export function NatalPalace({ width, height, x, y, palace }: NatalPalaceProps) {
         height={horizontalHeight}
         x={x + verticalWidth}
         y={y + verticalHeight * 2 + horizontalHeight}
+        color={isNatalTen ? "red" : "black"}
       />
       <NatalPalaceStars x={x} y={y} stars={palace.stars} />
     </Group>

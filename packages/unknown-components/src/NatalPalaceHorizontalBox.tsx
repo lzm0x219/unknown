@@ -9,6 +9,7 @@ export interface NatalPalaceHorizontalBoxProps {
   y: number;
   name: string;
   fontSize?: number;
+  color?: string;
 }
 
 export function NatalPalaceHorizontalBox({
@@ -18,6 +19,7 @@ export function NatalPalaceHorizontalBox({
   y,
   name,
   fontSize = 18,
+  color = "black",
 }: NatalPalaceHorizontalBoxProps) {
   const [textWidth, setTextWidth] = useState<number>(0);
   const [textHeight, setTextHeight] = useState<number>(0);
@@ -43,6 +45,7 @@ export function NatalPalaceHorizontalBox({
         ref={textRef}
         text={name}
         fontSize={fontSize}
+        fill={color}
         x={x + width / 2 - textWidth / 2}
         y={y + height / 2 - textHeight / 2 + 2}
       />

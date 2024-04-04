@@ -35,7 +35,7 @@ export function NatalPalaceStars({
               y={y + 8 + fontSize * 2}
             />
           )}
-          <Arrow
+          {/* <Arrow
             x={x}
             y={y}
             points={[10, 0, 100, 100]}
@@ -43,8 +43,8 @@ export function NatalPalaceStars({
             pointerWidth={10}
             fill="red"
             stroke="red"
-            strokeWidth={2}
-          />
+            strokeWidth={1}
+          /> */}
         </Fragment>
       ))}
     </Group>

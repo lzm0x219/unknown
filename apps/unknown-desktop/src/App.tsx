@@ -8,7 +8,7 @@ export default function App() {
         height={600}
         birthday="1998-12-18"
         birthdayType={2}
-        gender="男"
+        gender="女"
       />
     </div>
   );
