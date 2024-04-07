@@ -58,11 +58,11 @@ importers:
         version: 6.22.3(react-dom@18.2.0)(react@18.2.0)
     devDependencies:
       '@rsbuild/core':
-        specifier: 0.5.7
-        version: 0.5.7
+        specifier: 0.5.8
+        version: 0.5.8
       '@rsbuild/plugin-react':
-        specifier: 0.5.7
-        version: 0.5.7(@rsbuild/core@0.5.7)
+        specifier: 0.5.8
+        version: 0.5.8(@rsbuild/core@0.5.8)
       '@types/react':
         specifier: 18.2.74
         version: 18.2.74
@@ -86,11 +86,11 @@ importers:
         version: 18.2.0(react@18.2.0)
     devDependencies:
       '@rsbuild/core':
-        specifier: 0.5.7
-        version: 0.5.7
+        specifier: 0.5.8
+        version: 0.5.8
       '@rsbuild/plugin-react':
-        specifier: 0.5.7
-        version: 0.5.7(@rsbuild/core@0.5.7)
+        specifier: 0.5.8
+        version: 0.5.8(@rsbuild/core@0.5.8)
       '@types/react':
         specifier: 18.2.74
         version: 18.2.74
@@ -710,12 +710,12 @@ packages:
     dev: true
     optional: true
 
-  /@rsbuild/core@0.5.7:
-    resolution: {integrity: sha512-ccoXFc/4U44SxSwsJguxCDTynOGbEFR5Xy4DkPDzXZ4wliJk1jQyF+WPIq0437L/r+rdYmed3DbqI9iTLq19xQ==}
+  /@rsbuild/core@0.5.8:
+    resolution: {integrity: sha512-K1niizFJZUkqGJt/HHrxhF/DevHMWITVTaBT5CHMPNl4q3rhUkrKMPL0WwWGvFBhU+NrIHvpsvZ26Cscje5Dsg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
     dependencies:
-      '@rsbuild/shared': 0.5.7(@swc/helpers@0.5.3)
+      '@rsbuild/shared': 0.5.8(@swc/helpers@0.5.3)
       '@rspack/core': 0.5.9-canary-8778e17-20240403045016(@swc/helpers@0.5.3)
       '@swc/helpers': 0.5.3
       core-js: 3.36.1
@@ -723,21 +723,21 @@ packages:
       postcss: 8.4.38
     dev: true
 
-  /@rsbuild/plugin-react@0.5.7(@rsbuild/core@0.5.7):
-    resolution: {integrity: sha512-14DO+GCjwVnjiiTtCveumVkmbEYu8fyZrv8owC9Sjm5kYtXW4zYERyBhwqVROOceZo/4DaU7U52V8f+XLuDPXQ==}
+  /@rsbuild/plugin-react@0.5.8(@rsbuild/core@0.5.8):
+    resolution: {integrity: sha512-tLmAIsctNyUc6KzzW47HwlCULu64c9AEkSxvgkrcBk3JN7bB41TNz0B2Bg5vlUGDvSLrs45faG4VHlweH5ahvg==}
     peerDependencies:
-      '@rsbuild/core': ^0.5.7
+      '@rsbuild/core': ^0.5.8
     dependencies:
-      '@rsbuild/core': 0.5.7
-      '@rsbuild/shared': 0.5.7(@swc/helpers@0.5.3)
+      '@rsbuild/core': 0.5.8
+      '@rsbuild/shared': 0.5.8(@swc/helpers@0.5.3)
       '@rspack/plugin-react-refresh': 0.5.9-canary-8778e17-20240403045016(react-refresh@0.14.0)
       react-refresh: 0.14.0
     transitivePeerDependencies:
       - '@swc/helpers'
     dev: true
 
-  /@rsbuild/shared@0.5.7(@swc/helpers@0.5.3):
-    resolution: {integrity: sha512-5g5JjAZ970bQGiUqNnUj7BnXNS4ihliYYRCuCggQFW41JpZcMjodCSPHTaSjuCf/4V0YZRpdPXR3Bgkb6dGr+Q==}
+  /@rsbuild/shared@0.5.8(@swc/helpers@0.5.3):
+    resolution: {integrity: sha512-EbM3LopRKIm8GmTKdeKQdIV5vWA3aSW14tD70ioImcjAm6aLttRnEBDNvgJnFaqzGto9B8U1Bl2XSwuJHNsoYg==}
     dependencies:
       '@rspack/core': 0.5.9-canary-8778e17-20240403045016(@swc/helpers@0.5.3)
       caniuse-lite: 1.0.30001603
