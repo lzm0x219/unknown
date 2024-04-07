@@ -12,8 +12,8 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@rsbuild/core": "0.5.8",
-    "@rsbuild/plugin-react": "0.5.8",
+    "@rsbuild/core": "0.5.9",
+    "@rsbuild/plugin-react": "0.5.9",
     "@types/react": "18.2.74",
     "@types/react-dom": "18.2.24",
     "typescript": "5.4.4"
