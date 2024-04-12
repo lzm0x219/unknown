@@ -64,8 +64,8 @@ importers:
         specifier: 0.6.1
         version: 0.6.1(@rsbuild/core@0.6.1)
       '@types/react':
-        specifier: 18.2.76
-        version: 18.2.76
+        specifier: 18.2.77
+        version: 18.2.77
       '@types/react-dom':
         specifier: 18.2.25
         version: 18.2.25
@@ -92,8 +92,8 @@ importers:
         specifier: 0.6.1
         version: 0.6.1(@rsbuild/core@0.6.1)
       '@types/react':
-        specifier: 18.2.76
-        version: 18.2.76
+        specifier: 18.2.77
+        version: 18.2.77
       '@types/react-dom':
         specifier: 18.2.25
         version: 18.2.25
@@ -110,8 +110,8 @@ importers:
   packages/unknown-components:
     dependencies:
       '@types/react':
-        specifier: 18.2.76
-        version: 18.2.76
+        specifier: 18.2.77
+        version: 18.2.77
       '@types/react-dom':
         specifier: 18.2.25
         version: 18.2.25
@@ -147,8 +147,8 @@ importers:
   packages/unknown-hooks:
     dependencies:
       '@types/react':
-        specifier: 18.2.76
-        version: 18.2.76
+        specifier: 18.2.77
+        version: 18.2.77
       '@types/react-dom':
         specifier: 18.2.25
         version: 18.2.25
@@ -884,16 +884,16 @@ packages:
   /@types/react-dom@18.2.25:
     resolution: {integrity: sha512-o/V48vf4MQh7juIKZU2QGDfli6p1+OOi5oXx36Hffpc9adsHeXjVp8rHuPkjd8VT8sOJ2Zp05HR7CdpGTIUFUA==}
     dependencies:
-      '@types/react': 18.2.76
+      '@types/react': 18.2.77
 
   /@types/react-reconciler@0.28.8:
     resolution: {integrity: sha512-SN9c4kxXZonFhbX4hJrZy37yw9e7EIxcpHCxQv5JUS18wDE5ovkQKlqQEkufdJCCMfuI9BnjUJvhYeJ9x5Ra7g==}
     dependencies:
-      '@types/react': 18.2.76
+      '@types/react': 18.2.77
     dev: false
 
-  /@types/react@18.2.76:
-    resolution: {integrity: sha512-T6z/v7YxpswDM61Vq5KoSPTJqCkroJfsDIsvXCr4+qOY6gik5Ju4w0jf67cpC5z7ydOnp/E0V0W08pDRy8u9Xw==}
+  /@types/react@18.2.77:
+    resolution: {integrity: sha512-CUT9KUUF+HytDM7WiXKLF9qUSg4tGImwy4FXTlfEDPEkkNUzJ7rVFolYweJ9fS1ljoIaP7M7Rdjc5eUm/Yu5AA==}
     dependencies:
       '@types/prop-types': 15.7.12
       csstype: 3.1.3
