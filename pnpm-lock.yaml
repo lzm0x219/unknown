@@ -58,11 +58,11 @@ importers:
         version: 6.23.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@rsbuild/core':
-        specifier: 0.6.9
-        version: 0.6.9
+        specifier: 0.6.10
+        version: 0.6.10
       '@rsbuild/plugin-react':
-        specifier: 0.6.9
-        version: 0.6.9(@rsbuild/core@0.6.9)(@swc/helpers@0.5.3)
+        specifier: 0.6.10
+        version: 0.6.10(@rsbuild/core@0.6.10)(@swc/helpers@0.5.3)
       '@types/react':
         specifier: 18.3.1
         version: 18.3.1
@@ -86,11 +86,11 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@rsbuild/core':
-        specifier: 0.6.9
-        version: 0.6.9
+        specifier: 0.6.10
+        version: 0.6.10
       '@rsbuild/plugin-react':
-        specifier: 0.6.9
-        version: 0.6.9(@rsbuild/core@0.6.9)(@swc/helpers@0.5.3)
+        specifier: 0.6.10
+        version: 0.6.10(@rsbuild/core@0.6.10)(@swc/helpers@0.5.3)
       '@types/react':
         specifier: 18.3.1
         version: 18.3.1
@@ -506,18 +506,18 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rsbuild/core@0.6.9':
-    resolution: {integrity: sha512-WwP9HvAbR+agoXqLrXuYiFi/QqK4XAZ8xK6omgwgMMPUkNiMz3EFdRGDi7RCYQZG1nHdbNCv64rpYunrnlGcHg==}
+  '@rsbuild/core@0.6.10':
+    resolution: {integrity: sha512-Yg7YsD+MYszTnmCsYfvX4MjWvjEvOIQ2PNkXBoP0gJbY/0r/6LeaFKG9VL7/DsqrEoGOTMWbxnksd9mXB1TUjg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
-  '@rsbuild/plugin-react@0.6.9':
-    resolution: {integrity: sha512-BCAUNDLHRHWXiinK6j7Za4Ce2f6SZbb5Bu8Kh/5esQxHpoQ+fwACz1QWx3zqrhgT0RwrHrP5KUuvgDnKF/e4fQ==}
+  '@rsbuild/plugin-react@0.6.10':
+    resolution: {integrity: sha512-O9dIb5vmLJ5cg+CrLxtDwVYO+zTMis+Yr31tnNzyOiqW6/SteiLUfHp2X1ov0S4cDQZ9K86y8Jm0AQ6LncJrAQ==}
     peerDependencies:
-      '@rsbuild/core': ^0.6.9
+      '@rsbuild/core': ^0.6.10
 
-  '@rsbuild/shared@0.6.9':
-    resolution: {integrity: sha512-EpuhOeCJMD1fuTLAqH15ZVBuokp/RGSVmpB36LGFQvqk6aTP0ZlLEsNcK4EpUgUqfIQ5B+k32OZzWiIUL1Dh6w==}
+  '@rsbuild/shared@0.6.10':
+    resolution: {integrity: sha512-e8C2LWtzyNO/z1v3G+cJxhBhnQpduUHDj1cZPCIrfkWKICFMVaK09D0rj/Ip3/6OV4f5bCiEp5/+jhyu56MzdA==}
 
   '@rspack/binding-darwin-arm64@0.6.3':
     resolution: {integrity: sha512-NS6LFwJYjOFIy7mp8FCquox/xCiWuc6a3OQtx+f80c+86uDOiQyix6BJJa3JDdQQ6DmAR3L2eRzV+XVnCzZwNA==}
@@ -664,6 +664,9 @@ packages:
 
   caniuse-lite@1.0.30001612:
     resolution: {integrity: sha512-lFgnZ07UhaCcsSZgWW0K5j4e69dK1u/ltrL9lTUiFOwNHs12S3UMIEYgBV0Z6C6hRDev7iRnMzzYmKabYdXF9g==}
+
+  caniuse-lite@1.0.30001616:
+    resolution: {integrity: sha512-RHVYKov7IcdNjVHJFNY/78RdG4oGVjbayxv8u5IO74Wv7Hlq4PnJE6mo/OjFijjVFNy5ijnCt6H3IIo4t+wfEw==}
 
   chalk@5.3.0:
     resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
@@ -1762,29 +1765,31 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.13.2':
     optional: true
 
-  '@rsbuild/core@0.6.9':
+  '@rsbuild/core@0.6.10':
     dependencies:
-      '@rsbuild/shared': 0.6.9(@swc/helpers@0.5.3)
+      '@rsbuild/shared': 0.6.10(@swc/helpers@0.5.3)
       '@rspack/core': 0.6.3(@swc/helpers@0.5.3)
       '@swc/helpers': 0.5.3
       core-js: 3.36.1
       html-webpack-plugin: html-rspack-plugin@5.7.2(@rspack/core@0.6.3(@swc/helpers@0.5.3))
       postcss: 8.4.38
 
-  '@rsbuild/plugin-react@0.6.9(@rsbuild/core@0.6.9)(@swc/helpers@0.5.3)':
+  '@rsbuild/plugin-react@0.6.10(@rsbuild/core@0.6.10)(@swc/helpers@0.5.3)':
     dependencies:
-      '@rsbuild/core': 0.6.9
-      '@rsbuild/shared': 0.6.9(@swc/helpers@0.5.3)
+      '@rsbuild/core': 0.6.10
+      '@rsbuild/shared': 0.6.10(@swc/helpers@0.5.3)
       '@rspack/plugin-react-refresh': 0.6.3(react-refresh@0.14.2)
       react-refresh: 0.14.2
     transitivePeerDependencies:
       - '@swc/helpers'
 
-  '@rsbuild/shared@0.6.9(@swc/helpers@0.5.3)':
+  '@rsbuild/shared@0.6.10(@swc/helpers@0.5.3)':
     dependencies:
       '@rspack/core': 0.6.3(@swc/helpers@0.5.3)
-      caniuse-lite: 1.0.30001612
+      caniuse-lite: 1.0.30001616
       postcss: 8.4.38
+    optionalDependencies:
+      fsevents: 2.3.3
     transitivePeerDependencies:
       - '@swc/helpers'
 
@@ -1917,6 +1922,8 @@ snapshots:
   camelcase-css@2.0.1: {}
 
   caniuse-lite@1.0.30001612: {}
+
+  caniuse-lite@1.0.30001616: {}
 
   chalk@5.3.0: {}
 
