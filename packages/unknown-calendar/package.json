@@ -26,6 +26,6 @@
     "dev": "pkgroll --watch"
   },
   "devDependencies": {
-    "pkgroll": "2.1.0"
+    "pkgroll": "2.1.1"
   }
 }
