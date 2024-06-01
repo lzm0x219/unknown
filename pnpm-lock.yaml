@@ -58,11 +58,11 @@ importers:
         version: 6.23.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@rsbuild/core':
-        specifier: 0.7.1
-        version: 0.7.1
+        specifier: 0.7.2
+        version: 0.7.2
       '@rsbuild/plugin-react':
-        specifier: 0.7.1
-        version: 0.7.1(@rsbuild/core@0.7.1)(@swc/helpers@0.5.3)
+        specifier: 0.7.2
+        version: 0.7.2(@rsbuild/core@0.7.2)(@swc/helpers@0.5.3)
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -86,11 +86,11 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@rsbuild/core':
-        specifier: 0.7.1
-        version: 0.7.1
+        specifier: 0.7.2
+        version: 0.7.2
       '@rsbuild/plugin-react':
-        specifier: 0.7.1
-        version: 0.7.1(@rsbuild/core@0.7.1)(@swc/helpers@0.5.3)
+        specifier: 0.7.2
+        version: 0.7.2(@rsbuild/core@0.7.2)(@swc/helpers@0.5.3)
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -511,18 +511,18 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rsbuild/core@0.7.1':
-    resolution: {integrity: sha512-zMlCd6D7za0CVJUB4wV+qKPlKx+KYQd5JScadkUUmVa2pbYtqGsl4WL9nh6/EtPHh4+dQ+gWz0Yuv9iQwDTDPQ==}
+  '@rsbuild/core@0.7.2':
+    resolution: {integrity: sha512-Rv0TAmrhvSoyDJkBYDZ23RrIEAbdWQ6yKJtEZBQt9ZqpaNXoi/TNy9DOC2IjQIBaHGS2tH/j9ker1lQFEdgUIg==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
-  '@rsbuild/plugin-react@0.7.1':
-    resolution: {integrity: sha512-sbLz1VeTtHnGAHBNF1kqzBRx7LbbCz4JwGDd8rxnZ0Kr5ICo/XpKvp33WfEIhyQ0FvTaKfn96htqedqLqzWR1A==}
+  '@rsbuild/plugin-react@0.7.2':
+    resolution: {integrity: sha512-9sAqMFAaE7pFFyLsSVOb6IJE4YoZBLIbGzf/aFs5+fOO0FRR8KDDG7uLJehpLBekU8HipoQ70qtUVdx39kXgyA==}
     peerDependencies:
-      '@rsbuild/core': ^0.7.1
+      '@rsbuild/core': ^0.7.2
 
-  '@rsbuild/shared@0.7.1':
-    resolution: {integrity: sha512-AFFIPSyHx45qyBBm33R45IhVG+BeBzBBMvWtYlpFlUPDLcDjWQjpmnv/oN7E39JzXtxiNQUD7cxRG6zgMYdZvQ==}
+  '@rsbuild/shared@0.7.2':
+    resolution: {integrity: sha512-mX3PACf1DNdd8pIgPzjAuNEAPu1skr3rKGrZPUPhZ/nLX1rYJHJlIXWRuczscNGECs2QnPlqlgRgDbEaxPaPSQ==}
 
   '@rspack/binding-darwin-arm64@0.7.0':
     resolution: {integrity: sha512-vh+7sICv2L4hrtRZcoxwdwHRqKPM88PAtq1CcTkACEohOfxnRSJSfSvVYNMbOpqBkSUOQ6v2V9uy2UThtNqvKg==}
@@ -668,6 +668,9 @@ packages:
 
   caniuse-lite@1.0.30001617:
     resolution: {integrity: sha512-mLyjzNI9I+Pix8zwcrpxEbGlfqOkF9kM3ptzmKNw5tizSyYwMe+nGLTqMK9cO+0E+Bh6TsBxNAaHWEM8xwSsmA==}
+
+  caniuse-lite@1.0.30001625:
+    resolution: {integrity: sha512-4KE9N2gcRH+HQhpeiRZXd+1niLB/XNLAhSy4z7fI8EzcbcPoAqjNInxVHTiTwWfTIV4w096XG8OtCOCQQKPv3w==}
 
   chalk@5.3.0:
     resolution: {integrity: sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==}
@@ -1737,28 +1740,28 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
 
-  '@rsbuild/core@0.7.1':
+  '@rsbuild/core@0.7.2':
     dependencies:
-      '@rsbuild/shared': 0.7.1(@swc/helpers@0.5.3)
+      '@rsbuild/shared': 0.7.2(@swc/helpers@0.5.3)
       '@rspack/core': 0.7.0(@swc/helpers@0.5.3)
       '@swc/helpers': 0.5.3
       core-js: 3.36.1
       html-webpack-plugin: html-rspack-plugin@5.7.2(@rspack/core@0.7.0(@swc/helpers@0.5.3))
       postcss: 8.4.38
 
-  '@rsbuild/plugin-react@0.7.1(@rsbuild/core@0.7.1)(@swc/helpers@0.5.3)':
+  '@rsbuild/plugin-react@0.7.2(@rsbuild/core@0.7.2)(@swc/helpers@0.5.3)':
     dependencies:
-      '@rsbuild/core': 0.7.1
-      '@rsbuild/shared': 0.7.1(@swc/helpers@0.5.3)
+      '@rsbuild/core': 0.7.2
+      '@rsbuild/shared': 0.7.2(@swc/helpers@0.5.3)
       '@rspack/plugin-react-refresh': 0.7.0(react-refresh@0.14.2)
       react-refresh: 0.14.2
     transitivePeerDependencies:
       - '@swc/helpers'
 
-  '@rsbuild/shared@0.7.1(@swc/helpers@0.5.3)':
+  '@rsbuild/shared@0.7.2(@swc/helpers@0.5.3)':
     dependencies:
       '@rspack/core': 0.7.0(@swc/helpers@0.5.3)
-      caniuse-lite: 1.0.30001617
+      caniuse-lite: 1.0.30001625
       html-webpack-plugin: html-rspack-plugin@5.7.2(@rspack/core@0.7.0(@swc/helpers@0.5.3))
       postcss: 8.4.38
     optionalDependencies:
@@ -1884,6 +1887,8 @@ snapshots:
   camelcase-css@2.0.1: {}
 
   caniuse-lite@1.0.30001617: {}
+
+  caniuse-lite@1.0.30001625: {}
 
   chalk@5.3.0: {}
 
