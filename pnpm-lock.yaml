@@ -58,11 +58,11 @@ importers:
         version: 6.23.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       '@rsbuild/core':
-        specifier: 0.7.3
-        version: 0.7.3
+        specifier: 0.7.4
+        version: 0.7.4
       '@rsbuild/plugin-react':
-        specifier: 0.7.3
-        version: 0.7.3(@rsbuild/core@0.7.3)(@swc/helpers@0.5.3)
+        specifier: 0.7.4
+        version: 0.7.4(@rsbuild/core@0.7.4)(@swc/helpers@0.5.3)
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -86,11 +86,11 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@rsbuild/core':
-        specifier: 0.7.3
-        version: 0.7.3
+        specifier: 0.7.4
+        version: 0.7.4
       '@rsbuild/plugin-react':
-        specifier: 0.7.3
-        version: 0.7.3(@rsbuild/core@0.7.3)(@swc/helpers@0.5.3)
+        specifier: 0.7.4
+        version: 0.7.4(@rsbuild/core@0.7.4)(@swc/helpers@0.5.3)
       '@types/react':
         specifier: 18.3.3
         version: 18.3.3
@@ -511,18 +511,18 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@rsbuild/core@0.7.3':
-    resolution: {integrity: sha512-Zf49scJ706Zu6PEA/nl99XLEgouNacK4RzF4ckqQalR+FW5iyc9/WYTQYUWf/g7IhQsYy61W/5pv3ddEkCjzYA==}
+  '@rsbuild/core@0.7.4':
+    resolution: {integrity: sha512-ZXHDdcQwl3Py/aZl+/ak899HBnNEhClhVzGlv8sWsGYNvuDLBmTVAET4mUzQbt2s74RyyclQ+VAybteUXqXU5g==}
     engines: {node: '>=16.0.0'}
     hasBin: true
 
-  '@rsbuild/plugin-react@0.7.3':
-    resolution: {integrity: sha512-v1eVRyyw8T0EXW19bGbc6IJMD0+jRiEpvSdVkivRFVvVW5wqNnEajBoFMvfhoHw7VywVkH1CFhjSFX6omAe+fw==}
+  '@rsbuild/plugin-react@0.7.4':
+    resolution: {integrity: sha512-4UXe1LMlNkkb4TbBM9Lyob+apjOTc+Eebo46rN31K6dJCuNB/ItV1PcDV3xXfMhHBVsACYJp/yruDoFDLMvtwg==}
     peerDependencies:
-      '@rsbuild/core': ^0.7.3
+      '@rsbuild/core': ^0.7.4
 
-  '@rsbuild/shared@0.7.3':
-    resolution: {integrity: sha512-TBD0rlZOayK0clLwmcTMMXXEIR6R8rNHmSLglPd3lZaBBim8yhDgudR5gNUFvO5zOefaV1SBj/Mr1uQqSyHzOg==}
+  '@rsbuild/shared@0.7.4':
+    resolution: {integrity: sha512-MAIpGMuJtgsmiQm6k61TlHs8/d7idVK2aUv5uTySq07do4ct24Ak7u5mmxiZkwfOWRcFfnMKCgxEjdYrZmJ+Uw==}
 
   '@rspack/binding-darwin-arm64@0.7.1':
     resolution: {integrity: sha512-nuTZ720C33OZL0otuGy0RYw/AmX7UF/Siq7Kq/sy5T6jtHX7Yy/RWEZG3pKlZWDgbvjHw4jZ+4M9/arTRgMacQ==}
@@ -1717,25 +1717,25 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.18.0':
     optional: true
 
-  '@rsbuild/core@0.7.3':
+  '@rsbuild/core@0.7.4':
     dependencies:
-      '@rsbuild/shared': 0.7.3(@swc/helpers@0.5.3)
+      '@rsbuild/shared': 0.7.4(@swc/helpers@0.5.3)
       '@rspack/core': 0.7.1(@swc/helpers@0.5.3)
       '@swc/helpers': 0.5.3
       core-js: 3.36.1
       html-webpack-plugin: html-rspack-plugin@5.7.2(@rspack/core@0.7.1(@swc/helpers@0.5.3))
       postcss: 8.4.38
 
-  '@rsbuild/plugin-react@0.7.3(@rsbuild/core@0.7.3)(@swc/helpers@0.5.3)':
+  '@rsbuild/plugin-react@0.7.4(@rsbuild/core@0.7.4)(@swc/helpers@0.5.3)':
     dependencies:
-      '@rsbuild/core': 0.7.3
-      '@rsbuild/shared': 0.7.3(@swc/helpers@0.5.3)
+      '@rsbuild/core': 0.7.4
+      '@rsbuild/shared': 0.7.4(@swc/helpers@0.5.3)
       '@rspack/plugin-react-refresh': 0.7.1(react-refresh@0.14.2)
       react-refresh: 0.14.2
     transitivePeerDependencies:
       - '@swc/helpers'
 
-  '@rsbuild/shared@0.7.3(@swc/helpers@0.5.3)':
+  '@rsbuild/shared@0.7.4(@swc/helpers@0.5.3)':
     dependencies:
       '@rspack/core': 0.7.1(@swc/helpers@0.5.3)
       caniuse-lite: 1.0.30001625
