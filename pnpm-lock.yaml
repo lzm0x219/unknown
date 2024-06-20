@@ -73,8 +73,8 @@ importers:
         specifier: 3.4.4
         version: 3.4.4
       typescript:
-        specifier: 5.4.5
-        version: 5.4.5
+        specifier: 5.5.2
+        version: 5.5.2
 
   apps/unknown-mobile:
     dependencies:
@@ -98,14 +98,14 @@ importers:
         specifier: 18.3.0
         version: 18.3.0
       typescript:
-        specifier: 5.4.5
-        version: 5.4.5
+        specifier: 5.5.2
+        version: 5.5.2
 
   packages/unknown-calendar:
     devDependencies:
       pkgroll:
         specifier: 2.1.1
-        version: 2.1.1(typescript@5.4.5)
+        version: 2.1.1(typescript@5.5.2)
 
   packages/unknown-components:
     dependencies:
@@ -136,13 +136,13 @@ importers:
     devDependencies:
       pkgroll:
         specifier: 2.1.1
-        version: 2.1.1(typescript@5.4.5)
+        version: 2.1.1(typescript@5.5.2)
 
   packages/unknown-core:
     devDependencies:
       pkgroll:
         specifier: 2.1.1
-        version: 2.1.1(typescript@5.4.5)
+        version: 2.1.1(typescript@5.5.2)
 
   packages/unknown-hooks:
     dependencies:
@@ -164,7 +164,7 @@ importers:
     devDependencies:
       pkgroll:
         specifier: 2.1.1
-        version: 2.1.1(typescript@5.4.5)
+        version: 2.1.1(typescript@5.5.2)
 
 packages:
 
@@ -1438,8 +1438,8 @@ packages:
     resolution: {integrity: sha512-Ilme/2Q5kYw0AeRr+aw3s02+WrEYaY7U8vPnqSZU/jaDG/qd6jHVN6nRWyd/9KXvJGYM69vE6JImoGoyNjLwaw==}
     hasBin: true
 
-  typescript@5.4.5:
-    resolution: {integrity: sha512-vcI4UpRgg81oIRUFwR0WSIHKt11nJ7SAVlYNIu+QpqeyXP+gpQJy/Z4+F0aGxSE4MqwjyXvW/TzgkLAx2AGHwQ==}
+  typescript@5.5.2:
+    resolution: {integrity: sha512-NcRtPEOsPFFWjobJEtfihkLCZCXZt/os3zf8nTxjVH3RvTSxjrCamJpbExGvYOF+tFHc3pA65qpdwPbzjohhew==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -2260,7 +2260,7 @@ snapshots:
 
   pirates@4.0.6: {}
 
-  pkgroll@2.1.1(typescript@5.4.5):
+  pkgroll@2.1.1(typescript@5.5.2):
     dependencies:
       '@rollup/plugin-alias': 5.1.0(rollup@4.18.0)
       '@rollup/plugin-commonjs': 25.0.7(rollup@4.18.0)
@@ -2273,7 +2273,7 @@ snapshots:
       magic-string: 0.30.10
       rollup: 4.18.0
     optionalDependencies:
-      typescript: 5.4.5
+      typescript: 5.5.2
 
   postcss-import@15.1.0(postcss@8.4.38):
     dependencies:
@@ -2588,7 +2588,7 @@ snapshots:
       turbo-windows-64: 2.0.4
       turbo-windows-arm64: 2.0.4
 
-  typescript@5.4.5: {}
+  typescript@5.5.2: {}
 
   util-deprecate@1.0.2: {}
 
