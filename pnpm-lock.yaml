@@ -104,8 +104,8 @@ importers:
   packages/unknown-calendar:
     devDependencies:
       pkgroll:
-        specifier: 2.4.1
-        version: 2.4.1(typescript@5.5.4)
+        specifier: 2.4.2
+        version: 2.4.2(typescript@5.5.4)
 
   packages/unknown-components:
     dependencies:
@@ -135,14 +135,14 @@ importers:
         version: 18.2.10(konva@9.3.14)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
       pkgroll:
-        specifier: 2.4.1
-        version: 2.4.1(typescript@5.5.4)
+        specifier: 2.4.2
+        version: 2.4.2(typescript@5.5.4)
 
   packages/unknown-core:
     devDependencies:
       pkgroll:
-        specifier: 2.4.1
-        version: 2.4.1(typescript@5.5.4)
+        specifier: 2.4.2
+        version: 2.4.2(typescript@5.5.4)
 
   packages/unknown-hooks:
     dependencies:
@@ -163,8 +163,8 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       pkgroll:
-        specifier: 2.4.1
-        version: 2.4.1(typescript@5.5.4)
+        specifier: 2.4.2
+        version: 2.4.2(typescript@5.5.4)
 
 packages:
 
@@ -1082,8 +1082,8 @@ packages:
     resolution: {integrity: sha512-saLsH7WeYYPiD25LDuLRRY/i+6HaPYr6G1OUlN39otzkSTxKnubR9RTxS3/Kk50s1g2JTgFwWQDQyplC5/SHZg==}
     engines: {node: '>= 6'}
 
-  pkgroll@2.4.1:
-    resolution: {integrity: sha512-lIQv67Ynv85N5RNAoWF0Wit7vlifds4yOM5K64gclmDzNacbI18dLYpYRHk1/8XR5bLI37b+MWb2y/Fj/MQ+JA==}
+  pkgroll@2.4.2:
+    resolution: {integrity: sha512-9seL/4BNQsE+eL+kefjfh5jSLqQPSKXQE/adw1L76k49KFw/XnOnyU8dRwuWpVtvMyIVyecaSBIpvFYrmnZq6A==}
     engines: {node: '>=18'}
     hasBin: true
     peerDependencies:
@@ -2224,7 +2224,7 @@ snapshots:
 
   pirates@4.0.6: {}
 
-  pkgroll@2.4.1(typescript@5.5.4):
+  pkgroll@2.4.2(typescript@5.5.4):
     dependencies:
       '@rollup/plugin-alias': 5.1.0(rollup@4.18.1)
       '@rollup/plugin-commonjs': 26.0.1(rollup@4.18.1)
