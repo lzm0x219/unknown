@@ -6,7 +6,7 @@
     "mobile:dev": "turbo run dev --filter unknown-mobile..."
   },
   "devDependencies": {
-    "husky": "9.1.3",
+    "husky": "9.1.4",
     "is-ci": "3.0.1",
     "lint-staged": "15.2.7",
     "prettier": "3.3.3",
